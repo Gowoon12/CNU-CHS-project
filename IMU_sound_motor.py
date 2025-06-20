@@ -3,6 +3,7 @@ from motorLLC_sync import *
 from dynamixel_sdk import * 
 import time  # Make sure to import time for sleep
 
+# 리눅스에서 키보드 입력을 위한 코드
 # if os.name == 'nt':
 #     import msvcrt
 #     def getch():
