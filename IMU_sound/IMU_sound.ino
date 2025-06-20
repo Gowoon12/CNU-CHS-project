@@ -1,5 +1,5 @@
 #include <Wire.h>
-#include <MPU6050.h>
+#include <MPU6050.h>  // Library manager : MPU6050 설치 
 
 MPU6050 mpu;
 
