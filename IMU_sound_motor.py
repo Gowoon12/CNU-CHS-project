@@ -24,8 +24,6 @@ mc.open()
 mc.torque_enable()
 
 # The positions you want to move the motor to
-pos_1 = [3100]
-pos_2 = [2800]
 
 arduino = serial.Serial(port='/dev/ttyACM0', baudrate=9600, timeout=1)
 time.sleep(2)  # 연결 안정화 대기
