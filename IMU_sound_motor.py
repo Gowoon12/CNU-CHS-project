@@ -3,21 +3,21 @@ from motorLLC_sync import *
 from dynamixel_sdk import * 
 import time  # Make sure to import time for sleep
 
-if os.name == 'nt':
-    import msvcrt
-    def getch():
-        return msvcrt.getch().decode()
-else:
-    import sys, tty, termios
-    fd = sys.stdin.fileno()
-    old_settings = termios.tcgetattr(fd)
-    def getch():
-        try:
-            tty.setraw(sys.stdin.fileno())
-            ch = sys.stdin.read(1)
-        finally:
-            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-        return ch
+# if os.name == 'nt':
+#     import msvcrt
+#     def getch():
+#         return msvcrt.getch().decode()
+# else:
+#     import sys, tty, termios
+#     fd = sys.stdin.fileno()
+#     old_settings = termios.tcgetattr(fd)
+#     def getch():
+#         try:
+#             tty.setraw(sys.stdin.fileno())
+#             ch = sys.stdin.read(1)
+#         finally:
+#             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+#         return ch
 
 mc = motorLLC()
 mc.open()
